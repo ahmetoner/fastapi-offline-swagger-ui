@@ -8,8 +8,8 @@ def download_cdn_files()  -> None:
     static_path = Path(__file__).parent / PROJECT_NAME
     static_path.mkdir(parents=True, exist_ok=True)
     for cdn_url in (
-        "https://cdn.jsdelivr.net/npm/swagger-ui-dist@4/swagger-ui.css",
-        "https://cdn.jsdelivr.net/npm/swagger-ui-dist@4/swagger-ui-bundle.js",
+        "https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css",
+        "https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js",
     ):
         urlretrieve(cdn_url, static_path / cdn_url.split("/")[-1])
 
